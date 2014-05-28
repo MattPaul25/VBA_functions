@@ -20,7 +20,7 @@ End If
 End Function
 
 Function SearchInstance(cell As String, searchString As String, inst As Integer) As Integer
-'can search for second or third item in string
+'can search for and item in a string at nth instance
 instCount = 0
     For i = 1 To Len(cell)
             If Mid(cell, i, Len(searchString)) = searchString Then
