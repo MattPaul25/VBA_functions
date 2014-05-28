@@ -1,5 +1,5 @@
 Function InRange(cell As String, myRange As range, Optional strict As Boolean = False) As Boolean
-''checks wheather item exist in range - strict as true is an and criteria | all items must equal cell
+''checks whether item exist in range - strict as true is and criteria where all items must equal cell
 If strict Then
     For Each citem In myRange
             If citem <> cell Then
@@ -20,7 +20,7 @@ End If
 End Function
 
 Function SearchInstance(cell As String, searchString As String, inst As Integer) As Integer
-'can search for and item in a string at nth instance
+'searches for item in a string at nth instance
 instCount = 0
     For i = 1 To Len(cell)
             If Mid(cell, i, Len(searchString)) = searchString Then
@@ -47,8 +47,8 @@ ConcatRange = r1
 End Function
 
  Function RegExGet(aString, myExpression) As Variant
-'function used to create array of regular expression results
-'Requires pooint at vbscript_regexp library
+'function creates array of regular expression matches
+'requires user to point vba at vbscript_regexp library
     Dim regEx As New VBScript_RegExp_55.RegExp
      Dim newArray() As String
      Dim cnt As Integer
@@ -69,7 +69,7 @@ End Function
 
 Function RegExPosition(aString, myExpression) As Variant
 'function used to create array of regex positions in string
-'Requires pooint at vbscript_regexp library
+'requires point at vbscript_regexp library
     Dim regEx As New VBScript_RegExp_55.RegExp
      Dim newArray() As Integer
      Dim cnt As Integer
@@ -89,8 +89,7 @@ Function RegExPosition(aString, myExpression) As Variant
 End Function
 
 Function SplitUp(MyString As String, Optional MySep As String = "", Optional vertical As Boolean = False) As Variant
-'doesnt use vba split function - but does the same thing except in array format
-Dim newArray() As String
+'doesnt use vba split function - but does the same thing except out puts an array
 Dim j As Integer
 Dim i As Integer
 If MySep = "" Then
@@ -176,7 +175,7 @@ Loop
 ReptSep = rItem
 End Function
 
-Function countWord(cell)
+Function CountWord(cell)
 'counts the words of a cell to get a word count
 cell = Application.WorksheetFunction.Trim(cell)
 Count = 1
@@ -185,8 +184,8 @@ If Mid(cell, i, 1) = " " Then
 Count = Count + 1
 End If
 Next i
-countWord = Count
-End Function
+CountWord = Count
+cEnd Function
 
 Function ConvertFromDec(number, ToBase)
 'convers number in dec to another base |not perfected for numbers over 10
