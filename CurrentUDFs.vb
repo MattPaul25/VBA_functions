@@ -45,6 +45,7 @@ r1 = ""
  r1 = Left(r1, Len(r1) - Len(sep))
 ConcatRange = r1
 End Function
+
  Function RegExGet(aString, myExpression) As Variant
 'function used to create array of regular expression results
 'Requires pooint at vbscript_regexp library
@@ -135,6 +136,7 @@ currentString = ""
 currentString = Left(currentString, Len(currentString) - Len(MySep))
 ConcatIf = currentString
 End Function
+
 Function ConcatUnique(ConcatRange As Variant, MySep As String) As String
 'concats unique items | fails when items are small parts of larger previously concatenated items - will fix
 Dim x As Integer
