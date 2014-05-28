@@ -18,6 +18,7 @@ Else
     Next citem
 End If
 End Function
+
 Function SearchInstance(cell As String, searchString As String, inst As Integer) As Integer
 'can search for second or third item in string
 instCount = 0
@@ -31,6 +32,7 @@ instCount = 0
              End If
     Next i
 End Function
+
 Function ConcatRange(ByVal rnge As range, ByVal sep As String) As String
 'Concats range and separates each item with a designated separator
 r1 = ""
@@ -63,6 +65,7 @@ End Function
         Next
         RegExGet = newArray()
 End Function
+
 Function RegExPosition(aString, myExpression) As Variant
 'function used to create array of regex positions in string
 'Requires pooint at vbscript_regexp library
@@ -83,6 +86,7 @@ Function RegExPosition(aString, myExpression) As Variant
         Next
         RegExPosition = newArray()
 End Function
+
 Function SplitUp(MyString As String, Optional MySep As String = "", Optional vertical As Boolean = False) As Variant
 'doesnt use vba split function - but does the same thing except in array format
 Dim newArray() As String
@@ -118,6 +122,7 @@ Else
  SplitUp = newArray()
  End If
 End Function
+
  Function ConcatIf(ConcatRange As Variant, criteriaRange As Variant, criteria As String, MySep As String) As String
 'concats items in a range based on criteria | works much like a sum if
 Dim currentString As String
@@ -168,6 +173,7 @@ Do While x < num
 Loop
 ReptSep = rItem
 End Function
+
 Function countWord(cell)
 'counts the words of a cell to get a word count
 cell = Application.WorksheetFunction.Trim(cell)
@@ -179,6 +185,7 @@ End If
 Next i
 countWord = Count
 End Function
+
 Function ConvertFromDec(number, ToBase)
 'convers number in dec to another base |not perfected for numbers over 10
 NewNum = ""
@@ -197,6 +204,7 @@ Do While number >= 1
 Loop
 ConvertFromDec = NewNum
 End Function
+
 Function ConvertToDec(conValue, base)
 'converts non base 10 values to base 10
 For i = 0 To Len(conValue) - 1
@@ -204,6 +212,7 @@ For i = 0 To Len(conValue) - 1
 Next i
 ConvertToDec = x
 End Function
+
 Function ConvertBase(Value, FromBase, ToBase)
 'converts any base to any base | not great over base 10...
 If Value = 0 Then
@@ -222,6 +231,7 @@ Do While Value >= 1
 Loop
     ConvertBase = NewNum
 End Function
+
 Function UniqueArr(aRange)
 'outputs an array of unique items from an array with duplicates
 cnt = 1
@@ -241,6 +251,7 @@ For i = 2 To rMax
 Next i
 UniqueArr = newArr
 End Function
+
 Function CountUniques(aRange)
  'counts the unique items in list
 cnt = 1
@@ -251,6 +262,7 @@ For i = 2 To rMax
 Next i
 CountUniques = cnt
 End Function
+
 Function BubbleSort(aRange)
  'basic bubble sort - should make a more efficient sort algorithm - this is processor intensive
 aRange = Excel.WorksheetFunction.Transpose(aRange)
