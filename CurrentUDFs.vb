@@ -250,7 +250,7 @@ For i = 2 To rMax
         newArr(j) = aRange(i)
     End If
 Next i
-UniqueArr = newArr
+UniqueSortedArr = newArr
 End Function
 
 Function CountUniques(aRange)
