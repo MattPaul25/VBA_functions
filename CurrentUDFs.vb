@@ -233,7 +233,7 @@ Loop
     ConvertBase = NewNum
 End Function
 
-Function UniqueArr(aRange)
+Function UniqueSortedArr(aRange)
 'outputs an array of unique items from an array with duplicates
 cnt = 1
 Dim newArr() As Variant
