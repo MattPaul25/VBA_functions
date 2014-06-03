@@ -280,3 +280,26 @@ rMax = UBound(aRange)
   Next i
 SortArray = aRange
 End Function
+Function MidRight(ByVal x As String, ByVal y As String)
+    Dim l As String
+        For i = Len(x) To 0 Step -1
+             l = Mid(x, i, 1)
+                    If l = y Then
+                            l = Mid(x, i + 1, Len(x) - i)
+                        Exit For
+                    End If
+        Next i
+    MidRight = l
+ End Function
+ 
+Function MidLeft(ByVal x As String, ByVal y As String)
+    Dim l As String
+        For i = 1 To Len(x)
+             l = Mid(x, i, 1)
+                    If l = y Then
+                            l = Mid(x, 1, i - 1)
+                        Exit For
+                    End If
+        Next i
+    MidLeft = l
+End Function
